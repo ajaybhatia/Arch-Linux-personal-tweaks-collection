@@ -4,7 +4,7 @@ Arch-Linux-personal-tweaks-collection
 Personal collection of Arch Linux tweaks for my eeepc 1011px taken everywhere (ArchWiki and web in general ...)
 
 
-**Mount /tmp /var/log and /var/tmp in RAM and move Chromium/Chrome Cache in tmpfs (Less wear and tear on Hd/ssd and tmp file are also faster if they are in RAM.**
+**Mount /tmp /var/log and /var/tmp in RAM and move Chromium/Chrome Cache in tmpfs (Less wear and tear on Hd and tmp faster on ram)**
 
 - nano /etc/fstab
 - add this at the end of the file:
@@ -42,7 +42,7 @@ net.ipv6.conf.interface0.disable_ipv6 = 1
 net.ipv6.conf.interfaceN.disable_ipv6 = 1
 ```
 
-**Profile sync daemon (Reduced wear to physical drivesd**
+**Profile sync daemon (Reduced wear to physical drives)**
 ```
 - yaourt -S profile-sync-daemon
 
