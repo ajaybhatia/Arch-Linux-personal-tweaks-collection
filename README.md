@@ -78,7 +78,7 @@ with the following content:
 #!/bin/bash
 [[ -x /usr/bin/prelink ]] && /usr/bin/prelink -amR &>/dev/null
 
-and give ownership permissions
+. and give ownership permissions
 
 sudo chmod 755 /etc/cron.daily/prelink
 ```
