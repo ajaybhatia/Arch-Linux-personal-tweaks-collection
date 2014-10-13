@@ -165,6 +165,17 @@ WantedBy=multi-user.target
 sudo systemctl enable powertop.service
 
 
+**Useful terminal commands**
+
+- Get the number of installed packages
+
+pacman -Q|wc -l
+
+- Generate a list of installed packages
+
+pacman -Qe
+
+
 ... more to come
 
 
