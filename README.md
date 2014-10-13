@@ -1,4 +1,4 @@
-Arch-Linux-personal-tweaks-collection
+Arch-Linux-personal-collection
 =====================================
 
 Personal collection of Arch Linux tweaks for my eeepc 1011px taken everywhere (ArchWiki and web in general ...)
