@@ -88,6 +88,16 @@ BROWSERS="chromium opera midori"
 ```
 - sudo systemctl enable psd.service
 
+**Optimize sqlite databas in Google Chrome**
+
+- First: Close Google Chrome
+
+- cd ~/.config/google-chrome/Default
+
+- And give the following commands
+
+for i in `file *|grep SQL|cut -f1 -d:`; do echo "VACUUM;" | sqlite3 $i ; echo $i Ok; done
+cd *Storage && for i in `file *|grep SQL|cut -f1 -d:`; do echo "VACUUM;" | sqlite3 $i ; echo $i Ok; done
 
 **prelink**
 
