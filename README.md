@@ -6,13 +6,15 @@ Personal collection of Arch Linux tweaks for my eeepc 1011px taken everywhere (A
 
 **Mount /tmp /var/log and /var/tmp in RAM and move Chromium/Chrome Cache in tmpfs (Less wear and tear on Hd and tmp faster on ram)**
 
-- nano /etc/fstab
+- sudo nano /etc/fstab
 - add this at the end of the file:
 ```
 /var/log  /var/log   tmpfs  defaults,noatime,nodiratime,mode=0755  0 0
 /var/tmp  /var/tmp   tmpfs  defaults,noatime,nodiratime,mode=1777  0 0
 /tmp      /tmp       tmpfs  defaults,size=600m  0 0
 tmpfs   /home/<USER>/.cache     tmpfs   noatime,nodev,nosuid,size=400M  0       0
+
+<USER>= your username
 ```
 
 **Tweak swappiness**
@@ -23,7 +25,7 @@ sudo nano /etc/sysctl.d/99-sysctl.conf
 
 - Add the following content:
 ```
-vm.swappiness=1 
+vm.swappiness=10 
 vm.vfs_cache_pressure=50
 ```
 
@@ -44,7 +46,7 @@ net.ipv6.conf.interfaceN.disable_ipv6 = 1
 
 **Use different dns (e.g. the Google ones)**
 
-- sudo nano/etc/resolv.conf 
+- sudo nano /etc/resolv.conf 
 
 and replace nameserver with the new ones (dns1 and dns2 respectively)
 ```
