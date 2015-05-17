@@ -98,8 +98,7 @@ BROWSERS="chromium opera midori"
 
 - And give the following commands
 
-for i in `file *|grep SQL|cut -f1 -d:`; do echo "VACUUM;" | sqlite3 $i ; echo $i Ok; done
-cd *Storage && for i in `file *|grep SQL|cut -f1 -d:`; do echo "VACUUM;" | sqlite3 $i ; echo $i Ok; done
+http://pastebin.com/Czptsduk
 
 **prelink**
 
