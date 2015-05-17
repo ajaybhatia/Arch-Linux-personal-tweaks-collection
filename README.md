@@ -185,6 +185,28 @@ pacman -Q|wc -l
 pacman -Qe
 
 
-... more to come
+**Colorize bash prompt**
+
+![ScreenShot](http://s12.postimg.org/rziaubfe5/Istantanea_2015_05_17_11_02_34.png{url})
+
+- nano ~/bashrc and add the following
+
+PS1='\[\e[0;36m\]\u\[\e[m\] \[\e[1;33m\]\w\[\e[m\] \[\e[1;36m\]\$\[\e[m\] \[\e[$
+
+36m, 33m are the main colors. You can change as You wish.
+the list of colors is available here: https://wiki.archlinux.org/index.php/Color_Bash_Prompt
+
+- You can add a message like in screenshot by adding the following line at the end of the bashrc (Credits: dea1993)
+
+echo -e "Welcome to ArchLinux $(tput sgr0)" $(uname -r)
+
+- You can do the same for root user: sudo nano /root/.bashrc
+
+and add the following:
+
+echo -e "$(tput setaf 1)ATTENZIONE ENRICO:$(tput setaf 2) Sei Root: $(tput sgr0)" $(uname -r)
+
+
+
 
 
